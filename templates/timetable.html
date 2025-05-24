@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}Timetable{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">Your Weekly Timetable</h2>
+
+    {% if timetable %}
+        {% if timetable.items is defined %}
+            <!-- Dictionary-style timetable -->
+            {% for day, schedule in timetable.items() %}
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="mb-0">{{ day }}</h4>
+                    </div>
+                    <div class="card-body p-0">
+                        <table class="table mb-0">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Activity</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for slot in schedule %}
+                                    <tr class="{% if slot.is_break %}table-warning{% elif 'Break' in slot.activity or 'Lunch' in slot.activity %}table-secondary{% endif %}">
+                                        <td>{{ slot.time }}</td>
+                                        <td>
+                                            {% if slot.is_break %}
+                                                {{ slot.type }}
+                                            {% elif slot.code and slot.name %}
+                                                {{ slot.code }} - {{ slot.name }}
+                                            {% else %}
+                                                {{ slot.activity }}
+                                            {% endif %}
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            {% endfor %}
+
+        {% else %}
+            <!-- List-style timetable -->
+            <div class="row">
+                {% for slot in timetable %}
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-header bg-info text-white">
+                                <h5 class="mb-0">Time Slot {{ slot.time_slot }}</h5>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                {% for course in slot.courses %}
+                                    <li class="list-group-item">
+                                        <strong>{{ course.code }}</strong>: {{ course.name }}
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% else %}
+        <div class="alert alert-warning">You haven't registered for any courses yet.</div>
+        <a href="{{ url_for('course_registration') }}" class="btn btn-primary">Register Courses</a>
+    {% endif %}
+</div>
+{% endblock %}

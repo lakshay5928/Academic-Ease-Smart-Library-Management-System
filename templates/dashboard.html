@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+    <div class="dashboard">
+        <h2>Welcome, {{ name }}!</h2>
+        <div class="dashboard-cards">
+            <div class="card">
+                <h3>Book Search</h3>
+                <p>Search for books in the library by title, author, or ID.</p>
+                <a href="{{ url_for('book_search') }}" class="btn">Search Books</a>
+            </div>
+            <div class="card">
+                <h3>Course Registration</h3>
+                <p>Register for courses and generate your timetable.</p>
+                <a href="{{ url_for('course_registration') }}" class="btn">Register Courses</a>
+            </div>
+            <div class="card">
+                <h3>View Timetable</h3>
+                <p>View your current timetable.</p>
+                <a href="{{ url_for('timetable') }}" class="btn">View Timetable</a>
+            </div>
+<div class="card">
+    <h3>Book Returns</h3>
+    {% if books_to_return %}
+        <p>You have {{ books_to_return|length }} books to return</p>
+        <a href="{{ url_for('return_book') }}" class="btn btn-warning">Return Books</a>
+    {% else %}
+        <p>No books to return</p>
+    {% endif %}
+</div>
+        </div>
+    </div>
+{% endblock %}

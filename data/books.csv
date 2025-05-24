@@ -1,0 +1,101 @@
+id,title,author,available,serial_no,copies,issued_to
+1,Introduction to Algorithms,Thomas H. Cormen,1,ALG001,5,
+2,Clean Code,Robert C. Martin,1,CLN001,3,
+3,Design Patterns,Erich Gamma,0,DP001,2,230211001
+4,Algorithm Design,Jon Kleinberg,1,ALG002,4,
+5,The Art of Computer Programming,Donald Knuth,1,ACP001,3,
+6,Structure and Interpretation of Computer Programs,Gerald Jay Sussman,1,SICP001,2,
+7,Code Complete,Steve McConnell,0,CC001,3,230211002
+8,The Pragmatic Programmer,Andrew Hunt,1,PP001,4,
+9,Artificial Intelligence: A Modern Approach,Stuart Russell,1,AIMA001,2,
+10,Computer Networks,Andrew S. Tanenbaum,1,CN001,3,
+11,Operating System Concepts,Abraham Silberschatz,0,OSC001,2,230211003
+12,Database System Concepts,Henry F. Korth,1,DSC001,4,
+13,Compilers: Principles, Techniques, and Tools,Alfred V. Aho,1,CPTT001,2,
+14,Computer Organization and Design,David A. Patterson,1,COD001,3,
+15,The C Programming Language,Brian W. Kernighan,0,CPL001,5,230211004
+16,Python Crash Course,Eric Matthes,1,PCC001,4,
+17,JavaScript: The Good Parts,Douglas Crockford,1,JSGP001,3,
+18,Head First Java,Kathy Sierra,1,HFJ001,2,
+19,Learning Python,Mark Lutz,0,LP001,3,230211005
+20,Effective Java,Joshua Bloch,1,EJ001,4,
+21,The Linux Command Line,William Shotts,1,LCL001,2,
+22,Deep Learning,Ian Goodfellow,1,DL001,3,
+23,Grokking Algorithms,Aditya Bhargava,0,GA001,2,230211006
+24,The Mythical Man-Month,Fred Brooks,1,MMM001,4,
+25,Refactoring,Martin Fowler,1,REF001,3,
+26,Don't Make Me Think,Steve Krug,1,DMMT001,2,
+27,The Clean Coder,Robert C. Martin,0,TCC001,3,230211007
+28,Programming Pearls,Jon Bentley,1,PP002,4,
+29,Cracking the Coding Interview,Gayle Laakmann McDowell,1,CCI001,2,
+30,The Algorithm Design Manual,Steven Skiena,1,ADM001,3,
+31,Introduction to the Theory of Computation,Michael Sipser,0,ITC001,2,230211008
+32,Computer Architecture,John L. Hennessy,1,CA001,4,
+33,Data Science from Scratch,Joel Grus,1,DSFS001,3,
+34,Eloquent JavaScript,Marijn Haverbeke,1,EJ002,2,
+35,Automate the Boring Stuff with Python,Al Sweigart,0,ABSP001,3,230211009
+36,The Self-Taught Programmer,Cory Althoff,1,STP001,4,
+37,Algorithms Unlocked,Thomas H. Cormen,1,AU001,2,
+38,The Art of Unix Programming,Eric S. Raymond,1,AUP001,3,
+39,Code: The Hidden Language,Charles Petzold,0,CHL001,2,230211010
+40,Types and Programming Languages,Benjamin C. Pierce,1,TPL001,4,
+41,Computer Graphics,James D. Foley,1,CG001,3,
+42,Introduction to Machine Learning,Ethem Alpaydin,1,IML001,2,
+43,Game Programming Patterns,Robert Nystrom,0,GPP001,3,230211011
+44,The Elements of Computing Systems,Noam Nisan,1,ECS001,4,
+45,Real-World Algorithms,Pedro Domingos,1,RWA001,2,
+46,Data Structures and Algorithms,Michael T. Goodrich,1,DSA001,3,
+47,Computational Complexity,Christos Papadimitriou,0,CC002,2,230211012
+48,The Master Algorithm,Pedro Domingos,1,MA001,4,
+49,Reinforcement Learning,Richard S. Sutton,1,RL001,3,
+50,Neural Networks and Deep Learning,Michael Nielsen,1,NNDL001,2,
+51,The Hundred-Page Machine Learning Book,Andriy Burkov,0,HPML001,3,230211013
+52,Pattern Recognition and Machine Learning,Christopher Bishop,1,PRML001,4,
+53,Probabilistic Graphical Models,Daphne Koller,1,PGM001,2,
+54,Natural Language Processing,Daniel Jurafsky,1,NLP001,3,
+55,Speech and Language Processing,James H. Martin,0,SLP001,2,230211014
+56,Computer Vision,Linda G. Shapiro,1,CV001,4,
+57,Information Retrieval,Christopher D. Manning,1,IR001,3,
+58,Data Mining,Jiawei Han,0,DM001,2,230211015
+59,Big Data,Michael Minelli,1,BD001,4,
+60,The Data Warehouse Toolkit,Ralph Kimball,1,DWT001,3,
+61,Data Science for Business,Foster Provost,1,DSB001,2,
+62,Python for Data Analysis,Wes McKinney,0,PDA001,3,230211016
+63,R for Data Science,Hadley Wickham,1,RDS001,4,
+64,Data Visualization,Claus O. Wilke,1,DV001,2,
+65,Storytelling with Data,Cole Nussbaumer Knaflic,1,SWD001,3,
+66,The Visual Display of Quantitative Information,Edward Tufte,0,VDQI001,2,230211017
+67,Interactive Data Visualization,Scott Murray,1,IDV001,4,
+68,Designing Data-Intensive Applications,Martin Kleppmann,1,DDIA001,3,
+69,Database Internals,Alex Petrov,1,DI001,2,
+70,High Performance MySQL,Baron Schwartz,0,HPM001,3,230211018
+71,SQL Performance Explained,Markus Winand,1,SPE001,4,
+72,NoSQL Distilled,Pramod J. Sadalage,1,ND001,2,
+73,Seven Databases in Seven Weeks,Jim Wilson,1,SD7W001,3,
+74,MongoDB: The Definitive Guide,Kristina Chodorow,0,MDG001,2,230211019
+75,Redis in Action,Josiah L. Carlson,1,RIA001,4,
+76,Learning Spark,Holden Karau,1,LS001,3,
+77,Kafka: The Definitive Guide,Gwen Shapira,1,KDG001,2,
+78,Cloud Native Go,Matthew A. Titmus,0,CNG001,3,230211020
+79,Designing Distributed Systems,Brendan Burns,1,DDS001,4,
+80,Site Reliability Engineering,Betsy Beyer,1,SRE001,2,
+81,The Site Reliability Workbook,Niall Richard Murphy,1,SRW001,3,
+82,Release It!,Michael T. Nygard,0,RI001,2,230211021
+83,Continuous Delivery,Jez Humble,1,CD001,4,
+84,The DevOps Handbook,Gene Kim,1,DH001,3,
+85,Accelerate,Nicole Forsgren,1,ACC001,2,
+86,The Phoenix Project,Gene Kim,0,TPP001,3,230211022
+87,The Unicorn Project,Gene Kim,1,TUP001,4,
+88,Team Topologies,Matthew Skelton,1,TT001,2,
+89,Domain-Driven Design,Eric Evans,1,DDD001,3,
+90,Implementing Domain-Driven Design,Vaughn Vernon,0,IDDD001,2,230211023
+91,Clean Architecture,Robert C. Martin,1,CA002,4,
+92,Microservices Patterns,Chris Richardson,1,MP001,3,
+93,Building Microservices,Sam Newman,1,BM001,2,
+94,Monolith to Microservices,Sam Newman,0,MTM001,3,230211024
+95,Software Architecture in Practice,Len Bass,1,SAIP001,4,
+96,Designing Data-Intensive Applications,Martin Kleppmann,1,DDIA002,3,
+97,Enterprise Integration Patterns,Gregor Hohpe,1,EIP001,2,
+98,Patterns of Enterprise Application Architecture,Martin Fowler,0,PEAA001,3,230211025
+99,Working Effectively with Legacy Code,Michael Feathers,1,WELC001,4,
+100,Refactoring to Patterns,Joshua Kerievsky,1,RTP001,2,

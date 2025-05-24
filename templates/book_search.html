@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}Book Search{% endblock %}
+
+{% block content %}
+    <div class="book-search">
+        <h2>Book Search</h2>
+        <form method="POST" action="{{ url_for('book_search') }}">
+            <div class="form-group">
+                <input type="text" name="search_term" placeholder="Search term" required 
+                       value="{{ search_term if search_term else '' }}">
+                <select name="search_by">
+                    <option value="title" {% if search_by == 'title' %}selected{% endif %}>Title</option>
+                    <option value="author" {% if search_by == 'author' %}selected{% endif %}>Author</option>
+                    <option value="id" {% if search_by == 'id' %}selected{% endif %}>ID</option>
+                </select>
+                <button type="submit">Search</button>
+            </div>
+        </form>
+        
+        {% if results %}
+            <div class="search-results">
+                <h3>Search Results</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Availability</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for book in results %}
+                            <tr>
+                                <td>{{ book.id }}</td>
+                                <td>{{ book.title }}</td>
+                                <td>{{ book.author }}</td>
+                                <td>{% if book.available == '1' %}Available{% else %}Issued{% endif %}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% elif search_term %}
+            <p>No books found matching your search.</p>
+        {% endif %}
+    </div>
+{% endblock %}

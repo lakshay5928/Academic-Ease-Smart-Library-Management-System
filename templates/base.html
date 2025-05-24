@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AcademicEase - {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="bg-dark text-white p-3 mb-4">
+        <div class="container">
+            <h1 class="mb-0">AcademicEase</h1>
+            <nav class="mt-2">
+                {% if 'student_id' in session %}
+                    <a class="text-white mr-3" href="{{ url_for('dashboard') }}">Dashboard</a>
+                    <a class="text-white mr-3" href="{{ url_for('book_search') }}">Book Search</a>
+                    <a class="text-white mr-3" href="{{ url_for('issue_book_route') }}">Issue Book</a>
+                    <a class="text-white mr-3" href="{{ url_for('return_book') }}">Return Book</a>
+                    <a class="text-white mr-3" href="{{ url_for('course_registration') }}">Course Registration</a>
+                    <a class="text-white mr-3" href="{{ url_for('timetable') }}">Timetable</a>
+                    <a class="text-white" href="{{ url_for('logout') }}">Logout</a>
+                {% else %}
+                    <a class="text-white" href="{{ url_for('login') }}">Login</a>
+                {% endif %}
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="alert alert-info">
+                    {% for message in messages %}
+                        <p>{{ message }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+        
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="text-center mt-4 p-3 bg-light">
+        <p>&copy; 2025 Team Cyber Shield - AcademicEase Project</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

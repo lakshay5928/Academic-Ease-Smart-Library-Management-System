@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Course Registration{% endblock %}
+
+{% block content %}
+    <div class="course-registration">
+        <h2>Course Registration</h2>
+        <form method="POST" action="{{ url_for('course_registration') }}">
+            <table class="courses-table">
+                <thead>
+                    <tr>
+                        <th>Select</th>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Credits</th>
+                        <th>Prerequisites</th>
+                        <th>Time Slot</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for course in courses %}
+                        <tr>
+                            <td><input type="checkbox" name="courses" value="{{ course.code }}"></td>
+                            <td>{{ course.code }}</td>
+                            <td>{{ course.name }}</td>
+                            <td>{{ course.credits }}</td>
+                            <td>{{ course.prerequisites if course.prerequisites else "None" }}</td>
+                            <td>{{ course.time_slot }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <button type="submit" class="btn">Register Selected Courses</button>
+        </form>
+    </div>
+{% endblock %}

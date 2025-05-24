@@ -1,0 +1,111 @@
+code,name,credits,prerequisites,time_slot,capacity
+CS101,Introduction to Programming,3,"",1,30
+CS102,Computer Fundamentals,3,"",2,30
+CS103,Discrete Mathematics,3,"",3,25
+CS104,Data Structures,4,"CS101",4,25
+CS105,Algorithms,4,"CS104",5,20
+CS106,Computer Organization,3,"CS102",6,25
+CS107,Operating Systems,4,"CS106",7,20
+CS108,Database Systems,4,"CS101",8,25
+CS109,Computer Networks,3,"CS102",9,25
+CS110,Software Engineering,3,"CS101",10,30
+CS201,Advanced Programming,4,"CS101",1,20
+CS202,Theory of Computation,3,"CS103",2,20
+CS203,Compiler Design,4,"CS104,CS202",3,15
+CS204,Artificial Intelligence,4,"CS105",4,20
+CS205,Machine Learning,4,"CS204",5,20
+CS206,Computer Graphics,3,"CS101,MA101",6,20
+CS207,Distributed Systems,4,"CS107,CS109",7,15
+CS208,Data Mining,3,"CS108,CS205",8,20
+CS209,Natural Language Processing,3,"CS204",9,20
+CS210,Computer Security,3,"CS107,CS109",10,20
+MA101,Calculus I,4,"",1,30
+MA102,Calculus II,4,"MA101",2,30
+MA103,Linear Algebra,3,"MA101",3,25
+MA104,Probability and Statistics,3,"MA102",4,25
+MA105,Differential Equations,3,"MA102",5,20
+MA106,Discrete Structures,3,"MA103",6,25
+MA107,Number Theory,3,"MA106",7,20
+MA108,Graph Theory,3,"MA106",8,25
+MA109,Numerical Analysis,3,"MA102,CS101",9,25
+MA110,Operations Research,3,"MA104",10,30
+PH101,Physics I,4,"",1,30
+PH102,Physics II,4,"PH101",2,30
+PH103,Modern Physics,3,"PH102",3,25
+PH104,Electronics,3,"PH102",4,25
+PH105,Quantum Mechanics,4,"PH103",5,20
+PH106,Thermodynamics,3,"PH101",6,25
+PH107,Electromagnetism,4,"PH102",7,20
+PH108,Optics,3,"PH102",8,25
+PH109,Solid State Physics,3,"PH103",9,25
+PH110,Computational Physics,3,"PH101,CS101",10,30
+EE101,Basic Electronics,3,"",1,30
+EE102,Digital Electronics,3,"EE101",2,30
+EE103,Signals and Systems,4,"EE101,MA102",3,25
+EE104,Control Systems,4,"EE103",4,25
+EE105,Power Systems,3,"EE101",5,20
+EE106,Microprocessors,4,"EE102",6,25
+EE107,Communication Systems,4,"EE103",7,20
+EE108,VLSI Design,3,"EE102",8,25
+EE109,Embedded Systems,4,"EE106",9,25
+EE110,Robotics,3,"EE104",10,30
+CY101,Chemistry I,3,"",1,30
+CY102,Chemistry II,3,"CY101",2,30
+CY103,Organic Chemistry,4,"CY102",3,25
+CY104,Physical Chemistry,4,"CY102,MA102",4,25
+CY105,Inorganic Chemistry,3,"CY102",5,20
+CY106,Analytical Chemistry,3,"CY101",6,25
+CY107,Biochemistry,4,"CY103",7,20
+CY108,Polymer Chemistry,3,"CY103",8,25
+CY109,Environmental Chemistry,3,"CY101",9,25
+CY110,Computational Chemistry,3,"CY101,CS101",10,30
+BI101,Biology I,3,"",1,30
+BI102,Biology II,3,"BI101",2,30
+BI103,Genetics,4,"BI102",3,25
+BI104,Microbiology,4,"BI102",4,25
+BI105,Biotechnology,3,"BI103",5,20
+BI106,Ecology,3,"BI101",6,25
+BI107,Evolutionary Biology,4,"BI103",7,20
+BI108,Cell Biology,3,"BI102",8,25
+BI109,Neuroscience,3,"BI102",9,25
+BI110,Bioinformatics,3,"BI101,CS101",10,30
+EC101,Economics I,3,"",1,30
+EC102,Economics II,3,"EC101",2,30
+EC103,Microeconomics,4,"EC102",3,25
+EC104,Macroeconomics,4,"EC102",4,25
+EC105,Econometrics,3,"EC102,MA104",5,20
+EC106,Development Economics,3,"EC101",6,25
+EC107,International Economics,4,"EC102",7,20
+EC108,Financial Economics,3,"EC102",8,25
+EC109,Behavioral Economics,3,"EC101",9,25
+EC110,Computational Economics,3,"EC101,CS101",10,30
+PS101,Political Science I,3,"",1,30
+PS102,Political Science II,3,"PS101",2,30
+PS103,International Relations,4,"PS102",3,25
+PS104,Comparative Politics,4,"PS102",4,25
+PS105,Political Theory,3,"PS101",5,20
+PS106,Public Administration,3,"PS101",6,25
+PS107,Public Policy,4,"PS102",7,20
+PS108,Political Economy,3,"PS101,EC101",8,25
+PS109,Human Rights,3,"PS101",9,25
+PS110,Data Analysis in Political Science,3,"PS101,CS101",10,30
+HS101,History I,3,"",1,30
+HS102,History II,3,"HS101",2,30
+HS103,World History,4,"HS102",3,25
+HS104,Modern History,4,"HS102",4,25
+HS105,Ancient History,3,"HS101",5,20
+HS106,Medieval History,3,"HS101",6,25
+HS107,Art History,4,"HS101",7,20
+HS108,Economic History,3,"HS101,EC101",8,25
+HS109,Cultural History,3,"HS101",9,25
+HS110,Digital Humanities,3,"HS101,CS101",10,30
+EN101,English I,3,"",1,30
+EN102,English II,3,"EN101",2,30
+EN103,Creative Writing,4,"EN102",3,25
+EN104,Technical Writing,4,"EN102",4,25
+EN105,Literature,3,"EN101",5,20
+EN106,Linguistics,3,"EN101",6,25
+EN107,Drama,4,"EN101",7,20
+EN108,Poetry,3,"EN101",8,25
+EN109,Fiction,3,"EN101",9,25
+EN110,Digital Storytelling,3,"EN101,CS101",10,30
