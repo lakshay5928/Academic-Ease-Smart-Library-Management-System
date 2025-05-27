@@ -118,6 +118,8 @@ button:hover,
     margin-top: 0;
 }
 
+
+
 /* Dashboard */
 .dashboard-cards {
     display: grid;
@@ -253,4 +255,31 @@ tr:hover {
 .flash-message.error {
     background-color: #f8d7da;
     color: #721c24;
+}
+
+.department-filter .btn-group .btn {
+    color: #007bff;
+    border-color: #007bff;
+    background-color: #fff;
+    transition: background 0.2s, color 0.2s;
+    margin-right: 4px;
+}
+
+.department-filter .btn-group .btn:hover,
+.department-filter .btn-group .btn:focus {
+    background-color: #e6f0fa;
+    color: #0056b3;
+    border-color: #0056b3;
+}
+
+.department-filter .btn-group .btn.active,
+.department-filter .btn-group .btn:active {
+    background-color: #0056b3;
+    color: #fff;
+    border-color: #0056b3;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.department-filter .btn-group .btn:last-child {
+    margin-right: 0;
 }
