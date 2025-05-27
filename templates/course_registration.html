@@ -3,34 +3,90 @@
 {% block title %}Course Registration{% endblock %}
 
 {% block content %}
-    <div class="course-registration">
-        <h2>Course Registration</h2>
-        <form method="POST" action="{{ url_for('course_registration') }}">
-            <table class="courses-table">
-                <thead>
-                    <tr>
-                        <th>Select</th>
-                        <th>Code</th>
-                        <th>Name</th>
-                        <th>Credits</th>
-                        <th>Prerequisites</th>
-                        <th>Time Slot</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for course in courses %}
-                        <tr>
-                            <td><input type="checkbox" name="courses" value="{{ course.code }}"></td>
-                            <td>{{ course.code }}</td>
-                            <td>{{ course.name }}</td>
-                            <td>{{ course.credits }}</td>
-                            <td>{{ course.prerequisites if course.prerequisites else "None" }}</td>
-                            <td>{{ course.time_slot }}</td>
-                        </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-            <button type="submit" class="btn">Register Selected Courses</button>
-        </form>
+<div class="container">
+    <h2 class="mb-4">Course Registration</h2>
+
+    <!-- Department Filter -->
+    <div class="department-filter mb-4">
+        <div class="btn-group">
+            <a href="{{ url_for('course_registration') }}" 
+               class="btn btn-outline-primary {% if not current_department %}active{% endif %}">
+                All Courses
+            </a>
+            <a href="{{ url_for('course_registration', department='CS') }}" 
+               class="btn btn-outline-primary {% if current_department == 'CS' %}active{% endif %}">
+                CS Courses
+            </a>
+            <a href="{{ url_for('course_registration', department='MA') }}" 
+               class="btn btn-outline-primary {% if current_department == 'MA' %}active{% endif %}">
+                MA Courses
+            </a>
+            <a href="{{ url_for('course_registration', department='PH') }}" 
+               class="btn btn-outline-primary {% if current_department == 'PH' %}active{% endif %}">
+                PH Courses
+            </a>
+            <a href="{{ url_for('course_registration', department='EE') }}" 
+               class="btn btn-outline-primary {% if current_department == 'EE' %}active{% endif %}">
+                EE Courses
+            </a>
+            <a href="{{ url_for('course_registration', department='CY') }}" 
+               class="btn btn-outline-primary {% if current_department == 'CY' %}active{% endif %}">
+                CY Courses
+            </a>
+            <a href="{{ url_for('course_registration', department='BI') }}" 
+               class="btn btn-outline-primary {% if current_department == 'BI' %}active{% endif %}">
+                BI Courses
+            </a>
+            <a href="{{ url_for('course_registration', department='EC') }}" 
+               class="btn btn-outline-primary {% if current_department == 'EC' %}active{% endif %}">
+                EC Courses
+            </a>
+            <a href="{{ url_for('course_registration', department='PS') }}" 
+               class="btn btn-outline-primary {% if current_department == 'PS' %}active{% endif %}">
+                PS Courses
+            </a>
+            <a href="{{ url_for('course_registration', department='HS') }}" 
+               class="btn btn-outline-primary {% if current_department == 'HS' %}active{% endif %}">
+                HS Courses
+            </a>
+            <a href="{{ url_for('course_registration', department='EN') }}" 
+               class="btn btn-outline-primary {% if current_department == 'EN' %}active{% endif %}">
+                EN Courses
+            </a>
+        </div>
     </div>
+
+    <!-- Course Selection Form -->
+    <form method="POST">
+        <table class="table table-bordered table-hover">
+            <thead class="thead-light">
+                <tr>
+                    <th>Select</th>
+                    <th>Code</th>
+                    <th>Name</th>
+                    <th>Credits</th>
+                    <th>Prerequisites</th>
+                    <th>Time Slot</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for course in courses %}
+                <tr>
+                    <td>
+                        <input type="checkbox" name="courses" 
+                               value="{{ course.code }}" 
+                               id="course_{{ course.code }}">
+                    </td>
+                    <td>{{ course.code }}</td>
+                    <td>{{ course.name }}</td>
+                    <td>{{ course.credits }}</td>
+                    <td>{{ course.prerequisites if course.prerequisites else "None" }}</td>
+                    <td>{{ course.time_slot }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <button type="submit" class="btn btn-primary">Register Selected Courses</button>
+    </form>
+</div>
 {% endblock %}
