@@ -27,7 +27,7 @@
         <p>You have {{ books_to_return|length }} books to return</p>
         <a href="{{ url_for('return_book') }}" class="btn btn-warning">Return Books</a>
     {% else %}
-        <p>No books to return</p>
+        <a href="{{ url_for('return_book') }}" class="btn ">Return Books</a>
     {% endif %}
 </div>
         </div>
