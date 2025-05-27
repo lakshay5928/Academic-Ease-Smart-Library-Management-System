@@ -38,3 +38,11 @@ Helps assign course timeslots in a way that minimizes scheduling conflicts.
 cd \folderpath
 pip install -r requirements.txt
 python app.py
+
+🙋‍♂️ Author
+Lakshay5928
+
+⭐️ Show Your Support
+If you find this project helpful, please star the repository and share it with others!
+
+AcademicEase — Making academic management smarter and simpler!
