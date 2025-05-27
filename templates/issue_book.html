@@ -10,21 +10,16 @@
         {% if messages %}
             <div class="mb-3">
                 {% for category, message in messages %}
-                    <div class="alert alert-{{ 'success' if category == 'success' else 'danger' }}">{{ message }}</div>
+                    <div class="alert alert-{{ 'success' if category == 'success' else 'danger' }}">
+                        {{ message }}
+                    </div>
                 {% endfor %}
             </div>
         {% endif %}
     {% endwith %}
 
-    <!-- Search Form -->
-    <form method="GET" action="{{ url_for('issue_book_route') }}" class="mb-4">
-        <div class="input-group">
-            <input type="text" name="search" class="form-control" placeholder="Search by title or author" value="{{ search }}">
-            <button type="submit" class="btn btn-secondary">Search</button>
-        </div>
-    </form>
-
     <!-- Books Table -->
+    {% if books %}
     <table class="table table-bordered">
         <thead class="table-light">
             <tr>
@@ -60,12 +55,11 @@
                         {% endif %}
                     </td>
                 </tr>
-            {% else %}
-                <tr>
-                    <td colspan="5" class="text-center">No books found.</td>
-                </tr>
             {% endfor %}
         </tbody>
     </table>
+    {% else %}
+        <div class="alert alert-info text-center">No books available.</div>
+    {% endif %}
 </div>
 {% endblock %}
